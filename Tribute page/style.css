@@ -1,0 +1,57 @@
+body {
+  background-color: hsl(0,5%,70%);
+}
+#title {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 0px
+}
+#sub-title {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0px
+}
+#img-div{
+  text-align: center;
+}
+figcaption {
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#image {
+  max-width: 100%;
+  display: block;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.description {
+  font-size: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.list{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+#use-title {
+  font-size: 30px;
+}
+#use-list {
+  font-size: 22px;
+  float: left;
+}
+#img-list{
+  max-width: 100%;
+  width: 300px;
+  float: right;
+  padding-top: 30px;
+}
+#text-before-link{
+  margin-top: 310px;
+  font-size: 15px;
+  text-align: center;
+}
