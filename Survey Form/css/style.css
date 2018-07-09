@@ -1,0 +1,72 @@
+#outer-form {
+  background: hsl(90, 50%, 53%);
+}
+body {
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  min-width: 150px;
+  font-size: 16px;
+}
+#intro-image {
+  height: 150px;
+  max-width: 100%;
+}
+#title {
+  font-size: 2.9em;
+  margin: 0.5em;
+  padding-top: 0.5em;
+}
+#description {
+  font-size: 1.2em;
+  margin-top: -0.3em;
+}
+form {
+  background: hsl(350, 0%, 92%);
+  font-size: 1.35em;
+  padding-top: 0.2;
+  margin-left: 5em;
+  margin-right: 5em;
+  border-radius: 0.4em;
+}
+.FormRows {
+  padding-top: 0.8em;
+}
+.Labels {
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  width: 50%;
+  font-weight: bold;
+}
+.Input-Block {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  width: 40%;
+}
+.Input-Field {
+  font-size: 0.9em;
+  width: 100%;
+}
+.Dropdown {
+  font-size: 0.9em;
+}
+#dropdown {
+  margin-bottom: 1em;
+}
+#comments{
+  font-size: 0.9em;
+  height: 3em;
+  width: 17em;
+}
+#submit {
+  margin-top: 2em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  height: 2em;
+  background: rgb(200, 50, 0);
+  margin-bottom: 2em;
+}
+#submit:hover {
+  background: rgb(0, 240, 100);
+}

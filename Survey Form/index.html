@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <title>Survey Form</title>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      <link rel="stylesheet" href="css/style.css" type="text/css">
+  </head>
+  <body>
+    <div id="outer-form">
+      <header>
+        <div id="intro">
+          <h1 id="title">Survey Form</h1>
+          <p id="description">Without you, we can be no better! Please help us by filling this survey!</p>
+        </div>
+      </header>
+      <img id="intro-image" src="https://www.roanokeoutside.com/wp-content/uploads/2015/06/hero-hiking1.jpg" alt="a man in an mountain looking the sunset">
+      <div id="form">
+        <form id="survey-form" method="GET" action="file:///C:/Users/Alex/Downloads/Survey%20Form/index.html">
+          <div class="FormRows">
+            <div class="Labels">
+              <label id="name-label" for="name">*Name: </label>
+            </div>
+            <div class="Input-Block">
+              <input id="name" class="Input-Field" name="name" type="text" placeholder="Enter your name" required>
+            </div>
+          </div>
+          <div class="FormRows">
+            <div class="Labels">
+              <label id="email-label" for="email">*Email: </label>
+            </div>
+            <div class="Input-Block">
+              <input id="email" class="Input-Field" name="email" type="email" placeholder="Enter your email" required>
+            </div>
+          </div>
+          <div class="FormRows">
+            <div class="Labels">
+              <label id="number-label" for="number">*Age: </label>
+            </div>
+            <div class="Input-Block">
+              <input id="number" name="number" class="Input-Field" type="number" min="1" max="130" placeholder="Your current age" required>
+            </div>
+            <hr>
+            <div class="FormRows">
+              <div class="Labels">
+                <label for="hobbies">Choose your preferred Hobby:</label>
+              </div>
+              <div class="Input-Block">
+                <select id="dropdown" name="hobbies" class="Dropdown">
+                  <option disabled value>Choose an option</option>
+                  <option value="hiking">Hiking</option>
+                  <option value="fishing">Fishing</option>
+                  <option value="reading-books">Reading Books</option>
+                  <option value="skydiving">Skydiving</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="FormRows">
+              <div class="Labels">
+                <label for="radio-button-1">How much time do you want to spend on this activity?</label>
+              </div>
+              <div class="Input-Block">
+                <ul id="radio-button-time-spend" style="list-style: none">
+                  <li class="Radio-Button"><input name="radio-button-1" type="radio" value="1">Less than 1 hour</li>
+                  <li class="Radio-Button"><input name="radio-button-1" type="radio" value="2">1 hour</li>
+                  <li class="Radio-Button"><input name="radio-button-1" type="radio" value="3">More than 1 hour</li>
+                </ul>
+              </div>
+            </div>
+            <div class="FormRows">
+              <div class="Labels">
+                <label for="radio-button-2">How experienced are you?</label>
+              </div>
+              <div class="Input-Block">
+                <ul id="radio-button-experience" style="list-style: none">
+                  <li class="Radio-Button"><input name="radio-button-2" type="radio" value="1">No experience</li>
+                  <li class="Radio-Button"><input name="radio-button-2" type="radio" value="2">Some basics</li>
+                  <li class="Radio-Button"><input name="radio-button-2" type="radio" value="3">Advanced</li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+            <div class="FormRows">
+                <div class="Labels">
+                  <label for="checkbox-1">Which animals would you like as a company?<br>(Choose all that you like)</label>
+                </div>
+                <div class="Input-Block">
+                  <ul id="checkbox-animals" style="list-style: none">
+                    <li class="Checkbox"><input name="checkbox-1" type="checkbox" value="1">Camel</li>
+                    <li class="Checkbox"><input name="checkbox-1" type="checkbox" value="2">Shark</li>
+                    <li class="Checkbox"><input name="checkbox-1" type="checkbox" value="3">Dinosuar</li>
+                    <li class="Checkbox"><input name="checkbox-1" type="checkbox" value="4">Other</li>
+                  </ul>
+                </div>
+              </div>
+            <hr>
+            <div class="FormRows">
+                <div class="Labels">
+                  <label for="comment">Please write a comment for the last movie you watched:</label>
+                </div>
+                <div class="Input-Block">
+                  <textarea id="comments" name="comment" placeholder="Only some words... :-)"></textarea>
+                </div>
+              </div>
+            <hr>
+            <button id="submit" type="submit">Submit the Form</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
