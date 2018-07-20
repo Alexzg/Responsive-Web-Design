@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <title>Technical document</title>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      <link rel="stylesheet" href="css/style.css" type="text/css">
+  </head>
+  <body>
+    <div id="main-body">
+      <nav id="navbar">
+        <header id="navbar-header">Sections</header>
+        <ul id="navbar-ul">
+          <a class="nav-link" href="#Introduction" rel="bookmark"><li class="nav-list">Introduction</li></a>
+          <a class="nav-link" href="#Basics" rel="bookmark"><li class="nav-list">Basics</li></a>
+          <a class="nav-link" href="#Comparison" rel="bookmark"><li class="nav-list">Comparison</li></a>
+          <a class="nav-link" href="#Implementation" rel="bookmark"><li class="nav-list">Implementation</li></a>
+          <a class="nav-link" href="#Coding" rel="bookmark"><li class="nav-list">Coding</li></a>
+          <a class="nav-link" href="#Conclusion" rel="bookmark"><li class="nav-list">Conclusion</li></a>
+        </ul>
+      </nav>
+
+      <main id="main-doc">
+        <h1 id="main-title">Reinforcement Learning</h1>
+        <section id="Introduction" class="main-section">
+          <header id="introduction">Introduction</header>
+          <article class="article-section">
+            <p class="article-section-p">
+              Reinforcement learning (RL) is an area of machine learning, inspired by behaviorist psychology[citation needed], concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. The problem, due to its generality, is studied in many other disciplines, such as game theory, control theory, operations research, information theory, simulation-based optimization, multi-agent systems, swarm intelligence, statistics and genetic algorithms.
+            </p>
+            <p class="article-section-p">
+              Reinforcement learning differs from standard supervised learning in that correct input/output pairs need not be presented, and sub-optimal actions need not be explicitly corrected. Instead the focus is on performance, which involves finding a balance between exploration (of uncharted territory) and exploitation (of current knowledge). The exploration vs. exploitation trade-off has been most thoroughly studied through the multi-armed bandit problem and in finite MDPs.
+            </p>
+          </article>
+        </section>
+        <section id="Basics" class="main-section">
+          <header id="basics">Basics</header>
+          <article class="article-section">
+            <p class="article-section-p">Basic reinforcement is modeled as a Markov decision process:</p>
+            <ul class="article-section-ul">
+              <li>a set of environment and agent states, S</li>
+              <li>a set of actions, A, of the agent</li>
+              <li>Pa(s, s') is the probability of transition from state s to state s' under action a</li>
+              <li>Ra(s, s') is the immediate reward after transition from s to s' with action a</li>           
+              <li>rules that describe what the agent observes</li>
+            </ul>
+            <p class="article-section-p">
+              Rules are often stochastic. The observation typically involves the scalar, immediate reward associated with the last transition. In many works, the agent is assumed to observe the current environmental state (full observability). If not, the agent has partial observability. Sometimes the set of actions available to the agent is restricted (a zero balance cannot be reduced).
+            </p>
+            <p class="article-section-p">
+              When the agent's performance is compared to that of an agent that acts optimally, the difference in performance gives rise to the notion of regret. In order to act near optimally, the agent must reason about the long term consequences of its actions (i.e., maximize future income), although the immediate reward associated with this might be negative.
+            </p>
+            <p class="article-section-p">
+              Thus, reinforcement learning is particularly well-suited to problems that include a long-term versus short-term reward trade-off. It has been applied successfully to various problems, including robot control, elevator scheduling, telecommunications, backgammon, checkers[5] and go (AlphaGo).
+            </p>
+          </article>
+        </section>
+        <section id="Comparison" class="main-section">
+          <header id="comparison">Comparison</header>
+          <article class="article-section">
+            <p class="article-section-p">
+              Reinforcement Learning belongs to a bigger class of machine learning algorithm.
+            </p>
+            <ul id="comparison-ul" class="article-section-ul">
+              <li><p class="article-section-p">
+                <strong>Supervised vs Reinforcement Learning:</strong> In supervised learning, there’s an external “supervisor”, which has knowledge of the environment and who shares it with the agent to complete the task. But there are some problems in which there are so many combinations of subtasks that the agent can perform to achieve the objective. So that creating a “supervisor” is almost impractical. For example, in a chess game, there are tens of thousands of moves that can be played. So creating a knowledge base that can be played is a tedious task. In these problems, it is more feasible to learn from one’s own experiences and gain knowledge from them. This is the main difference that can be said of reinforcement learning and supervised learning. In both supervised and reinforcement learning, there is a mapping between input and output. But in reinforcement learning, there is a reward function which acts as a feedback to the agent as opposed to supervised learning.
+                </p>
+              </li>
+              <li>
+                <p class="article-section-p">
+                  <strong>Unsupervised vs Reinforcement Leanring:</strong> In reinforcement learning, there’s a mapping from input to output which is not present in unsupervised learning. In unsupervised learning, the main task is to find the underlying patterns rather than the mapping. For example, if the task is to suggest a news article to a user, an unsupervised learning algorithm will look at similar articles which the person has previously read and suggest anyone from them. Whereas a reinforcement learning algorithm will get constant feedback from the user by suggesting few news articles and then build a “knowledge graph” of which articles will the person like.
+                </p>
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section id="Implementation" class="main-section">
+          <header id="implementation">Implementation</header>
+          <article class="article-section">
+            <p class="article-section-p">
+              Pseudo-code (algorithm):
+            </p>
+            <code id="implementation-code" class="article-section-code">
+              <ol>
+                <li>Initialize the Values table ‘Q(s, a)’</li>
+                <li>Observe the current state ‘s’</li>
+                <li>Choose an action ‘a’ for that state based on one of the action selection policies (eg. epsilon greedy)</li>
+                <li>Take the action, and observe the reward  ‘r’ as well as the new state  ‘s’</li>
+                <li>Update the Value for the state using the observed reward and the maximum reward possible for the next state. The updating is done according to the formula and parameters described above</li>
+                <li>Set the state to the new state, and repeat the process until a terminal state is reached</li>
+              </ol>
+            </code>
+          </article>
+        </section>
+        <section id="Coding" class="main-section">
+          <header id="coding">Coding</header>
+          <article class="article-section">
+            <p class="article-section-p">
+              <strong>Follow the steps to create your own RL code:</strong>
+            </p>
+            <ol>
+              <li>
+                <p class="article-section-p">Install keras-rl library</p>
+                <code id="coding-code-1" class="article-section-code">
+                  git clone https://github.com/matthiasplappert/keras-rl.git<br>
+                  cd keras-rl<br>
+                  python setup.py install
+                </code>
+              </li>
+              <li>
+                <p class="article-section-p">Install dependencies for CartPole environment</p>
+                <code id="coding-code-2" class="article-section-code">
+                  pip install h5py<br>
+                  pip install gym
+                </code>
+              </li>
+              <li>
+                <p class="article-section-p">Get started</p>
+                <code id="coding-code-3" class="article-section-code">
+                  import numpy as np<br>
+                  import gym
+                </code>
+                <code id="coding-code-4" class="article-section-code">
+                  from keras.models import Sequential<br>
+                  from keras.layers import Dense, Activation, Flatten<br>
+                  from keras.optimizers import Adam
+                </code>
+                <code id="coding-code-5" class="article-section-code">
+                  env = gym.make(ENV_NAME)<br>
+                  np.random.seed(123)<br>
+                  nb_actions = env.action_space.n<br>
+                  model.add(Dense(16))<br>
+                  model.add(Activation('relu'))<br>
+                  policy = EpsGreedyQPolicy()<br>
+                </code>
+              </li>
+            </ol>
+          </article>
+        </section>
+
+        <section id="Conclusion" class="main-section">
+          <header id="conclusion">Conclusion</header>
+          <article class="article-section">
+            <p class="article-section-p">
+              With the recent success in Deep Learning, now the focus is slowly shifting to applying deep learning to solve reinforcement learning problems. The news recently has been flooded with the defeat of Lee Sedol by a deep reinforcement learning algorithm developed by Google DeepMind. Similar breakthroughs are being seen in video games, where the algorithms developed are achieving human-level accuracy and beyond. Research is still at par, with both industrial and academic masterminds working together to accomplish the goal of building better self-learning robots
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+    <footer>
+      Page designed by @alexzg as an example. The content of this page should not be taken into account as fact.
+    </footer>
+  </body>
+</html>
